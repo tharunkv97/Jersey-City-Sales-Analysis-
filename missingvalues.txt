@@ -1,0 +1,30 @@
+1.HOW TO HANDLE MISSING VALUES
+
+Count for the missing values in all the columns 
+General Process for Handling Missing Values in Any Dataset Handling missing values is critical in data preprocessing. The approach depends on data type, missing percentage, and business logic.
+ 
+Final Summary: How to Handle Missing Values?
+Missing %            	Numerical        	                Categorical
+  <5%	              Mean or Median	                    Mode (Most Frequent)
+5% - 20%	          Median (if skewed)	                "Unknown" or Mode
+ >20%	              Predict with other columns	        Predict from similar groups
+ >50%	              Drop Column	                        Drop Column
+ 
+✅ Key Takeaways
+1.	Always check missing percentages first before choosing a method.
+2.	Categorical values should be filled with Mode or 'Unknown', not Mean/Median.
+3.	Numerical values should be filled using Mean (if normal) or Median (if skewed).
+4.	If missing values are too high (>50%), consider dropping the column.
+5.	Check the dataset after handling missing values to ensure correctness.
+
+Here summary for predicted for similar groups
+
+Step 1: Import Required Libraries
+Step 2: Define a Window Specification
+Step 3: Find the Most Common Outlet_Size Per Outlet_Type
+Step 4: Join This Data Back to the Original DataFrame
+Step 5: Fill Missing Values in Outlet_Size
+
+After this we have to make sure there are no missing values if there are still missing values we should do second time imputation with global means or modes either in categorical or in numerical data.
+If missing values remain in a numerical column even after initial imputation, you should apply a similar two-step strategy which is Fill any remaining missing values with global mean
+Now, let’s handle the remaining missing values by filling them with the most common Outlet_Size across all data (global mode):
